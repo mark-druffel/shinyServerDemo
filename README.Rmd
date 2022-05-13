@@ -1,0 +1,35 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+pkgload::load_all()
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# shinyServerDemo
+
+A working shiny demo to test deployment
+
+## Installation
+
+``` r
+install.packages("pak")
+pak::pkg_install("mark-druffel/shinyServerDemo")
+```
+
+## Launch Shiny App
+
+Run the app like so:
+
+```{r run_app, eval = F}
+library(shinyServerDemo)
+run_app("demo")
+```
