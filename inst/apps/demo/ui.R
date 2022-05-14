@@ -1,7 +1,7 @@
 ui <- shiny::fluidPage(
   tags$head(
     shiny::tags$title("Table Demo"),
-    #includeCSS("/Users/mark.druffel/Documents/GitHub/reactableDemo/inst/apps/css/demo.css"),
+    shiny::includeCSS(system.file("assets", "css", "reactable.css", package = "shinyServerDemo")),
     #prismDependencies
   ),
   shiny::div(
@@ -14,3 +14,4 @@ ui <- shiny::fluidPage(
     reactable::reactableOutput("table")
   )
 )
+

@@ -13,7 +13,7 @@ select_org <- function(label, selectize, multiple, selected, width, size){
     choices = org_names,
     selectize = rlang::maybe_missing(selectize, default = T),
     multiple = rlang::maybe_missing(multiple, default = T),
-    selected = rlang::maybe_missing(selected, default = "Kroger"),
+    selected = rlang::maybe_missing(selected, default = org_names),
     width = rlang::maybe_missing(selected, default =  400),
     size = rlang::maybe_missing(selected, NULL)
   )

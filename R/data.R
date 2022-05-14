@@ -26,7 +26,8 @@ get_sales_df <- function(){
       brand %in% c("Kroger", "Food 4 Less", "Marianos", "Fred Meyer") ~ "Kroger",
       brand %in% c("CVS", "Rite-Aid") ~ "CVS",
       T ~ brand
-    ))
+    )) |>
+    dplyr::mutate(location_name = glue::glue("{brand} - {store_id}"))
   return(sales)
 }
 
